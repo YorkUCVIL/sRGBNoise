@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<title>Wavelet Flow</title>
+		<!-- <link rel='icon' href='/~jjyu/favicon.png'> -->
+		<link rel='stylesheet' href='project_page.css' type='text/css'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+	</head>
+
+	<body>
+		<h1 class='project_title'>Modeling sRGB Camera Noise with Normalizing Flows</h1>
+		<!-- <div class='project_date'>Sept. 25, 2020</div> -->
+		<img src='img/model_architecture.jpg'>
+
+		<h2 class='project_section'>Abstract</h2>
+        Noise modeling and reduction are fundamental tasks in low-level computer vision. They are particularly important for smartphone cameras relying on small sensors that ex- hibit visually noticeable noise. There has recently been re- newed interest in using data-driven approaches to improve camera noise models via neural networks. These data- driven approaches target noise present in the raw-sensor image before it has been processed by the camera’s image signal processor (ISP). Modeling noise in the RAW-rgb do- main is useful for improving and testing the in-camera de- noising algorithm; however, there are situations where the camera’s ISP does not apply denoising or additional de- noising is desired when the RAW-rgb domain image is no longer available. In such cases, the sensor noise propa- gates through the ISP to the final rendered image encoded in standard RGB (sRGB). The nonlinear steps on the ISP culminate in a significantly more complex noise distribution in the sRGB domain and existing raw-domain noise models are unable to capture the sRGB noise distribution. We pro- pose a new sRGB-domain noise model based on normaliz- ing flows that is capable of learning the complex noise dis- tribution found in sRGB images under various ISO levels. Our normalizing flows-based approach outperforms other models by a large margin in noise modeling and synthesis tasks. We also show that image denoisers trained on noisy images synthesized with our noise model outperforms those trained with noise from baselines models.
+        
+		<h2 class='project_section'>Authors</h2>
+		<div class="project_author_wrapper">
+			<a class="project_author">
+				<img class="author_icon" src="img/shayan.png">
+				<p>Shayan Kousha</p>
+			</a>
+			<a class="project_author">
+				<img class="author_icon" src="img/AliMaleky_small_crop.jpg">
+				<p>Ali Maleky</p>
+			</a>
+			<a class="project_author" href="http://www.cse.yorku.ca/~mbrown/">
+				<img class="author_icon" src="img/michael.jpg">
+				<p>Michael S. Brown</p>
+			</a>
+			<a class="project_author" href="https://mbrubake.github.io/">
+				<img class="author_icon" src="img/marcus.png">
+				<p>Marcus A. Brubaker</p>
+			</a>
+		</div>
+
+		<h2 class='project_section'>Material</h2>
+		<div class='project_material_wrapper'>
+			<a style='margin-left:27.3%;' class='project_material' href='./soon.html'>
+				<img style='margin: 4.1% 0;' class='shadow_icon' src='img/paper_preview.jpg'>
+				<p>Paper</p>
+			</a>
+			<a class='project_material' href='./soon.html'>
+				<img style='margin: 14.6% 0;' src='icons/github.svg'>
+				<p>Code</p>
+			</a>
+		</div>
+
+		<h2 class='project_section'>Citation</h2>
+		<div class="cite_bib">
+			@inproceedings{Kousha2022ModelingsRGB,<br>
+				&ensp;&ensp;&ensp; author = {Shayan Kousha and Ali Maleky and Michael S. Brown and Marcus A. Brubaker},<br>
+				&ensp;&ensp;&ensp; title = {Modeling sRGB Camera Noise with Normalizing Flows},<br>
+				&ensp;&ensp;&ensp; booktitle = {CVPR},<br>
+				&ensp;&ensp;&ensp; year = {2022}<br>
+			}
+		</div>
+	</body>
+</html>
